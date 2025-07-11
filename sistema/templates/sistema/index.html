@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estado del Sistema</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      border: 2px solid #4CAF50;
+      border-radius: 5px;
+    }
+    legend {
+      font-weight: bold;
+      color: #4CAF50;
+    }
+    button {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 >Sistema del Monitor</h1>
+  </header>
+
+  <main>
+    {% if error %}
+      <p style="color:red;">Error: {{ error }}</p>
+    {% else %}
+      <section>
+        <fieldset>
+          <legend>CPU</legend>
+          <p>Uso de CPU: {{ cpu_uso }}%</p>
+          <p>Cantidad de núcleos: {{ cantidad_de_nucleos }}</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Memoria RAM</legend>
+          <p>Total: {{ ram_total }} GB</p>
+          <p>Usada: {{ ram_usada }} GB</p>
+          <p>Porcentaje usada: {{ ram_porcentaje }}%</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Disco Duro</legend>
+          <p>Total: {{ disco_total }} GB</p>
+          <p>Usada: {{ disco_usada }} GB</p>
+          <p>Libre: {{ disco_libre }} GB</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sistema Operativo</legend>
+          <p>{{ sistema_operativo }}</p>
+        </fieldset>
+      </section>
+
+      <form method="get">
+        <button type="submit">Actualizar</button>
+      </form>
+    {% endif %}
+  </main>
+  <footer></footer>
+
+</body>
+</html>
