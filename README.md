@@ -10,7 +10,7 @@ Este proyecto es una aplicación web en Django usando la libreria externa psutil
 
 Instrucciones claras para ejecutar el proyecto localmente
 
-1. Clonar el repositorio: git clone https://github.com/usuario/django-psutil-monitor.git
+1. Clonar el repositorio: git clone https://github.com/dartgorsky/django-psutil-monitor.git
 2. Entrar en la carpeta del proyecto: cd django-psutil-monitor
 3. Crear un entorno virtual: python3 -m venv venv
 4. Activar el entorno virtual: source venv/bin/activate
